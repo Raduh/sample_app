@@ -1,11 +1,11 @@
-<% if @user.errors.any? %>
-    <% @user.errors.delete(:password_digest) %>     
+<% if object.errors.any? %>
+    <% @user.errors.delete(:password_digest) if object.class == User %>     
     <div id="error_explanation">
         <div class="alert alert-error">
-            The form contains <%= pluralize(@user.errors.count, "error") %>
+            The form contains <%= pluralize(object.errors.count, "error") %>
         </div>
         <ul>
-        <% @user.errors.full_messages.each do |msg| %>
+        <% object.errors.full_messages.each do |msg| %>
             <li>* <%= msg %></li>
         <% end %>
         </ul>
