@@ -208,7 +208,14 @@ input, textarea, select, .uneditable-input {
 
 aside {
     textarea {
-        height: 100px;
+        height: 150px;
         margin-bottom: 5px;
     }
+}
+
+/* micropost jQuery countdown */
+
+.countdown {
+    display: inline;
+    color: $grayLight;
 }
